@@ -102,6 +102,20 @@ class BaseGraphDB(ABC):
         """
         pass
 
+    @abstractmethod
+    async def get_all_organizations(self) -> List[Dict[str, str]]:
+        """
+        Gets all organizations from the graph database.
+
+        Returns:
+            List[Dict[str, str]] each containing:
+
+                + org_id: Short UUID string
+                + org_name: Organization name
+                + created_at: ISO format timestamp
+        """
+        pass
+
     # Agent methods
     @abstractmethod
     async def create_agent(

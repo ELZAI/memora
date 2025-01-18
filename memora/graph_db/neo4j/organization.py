@@ -4,7 +4,7 @@ import neo4j
 
 from ..base import BaseGraphDB
 
-from typing import Dict
+from typing import Dict, List
 
 
 class Neo4jOrganization(BaseGraphDB):
@@ -151,4 +151,33 @@ class Neo4jOrganization(BaseGraphDB):
             database=self.database, default_access_mode=neo4j.READ_ACCESS
         ) as session:
             org_data = await session.execute_read(get_org_tx)
+            return org_data
+
+    @override
+    async def get_all_organizations(self) -> List[Dict[str, str]]:
+        """
+        Gets all organizations from the graph database.
+
+        Returns:
+            List[Dict[str, str]] each containing:
+
+                + org_id: Short UUID string
+                + org_name: Organization name
+                + created_at: ISO format timestamp
+        """
+
+        async def get_all_org_tx(tx):
+            result = await tx.run(
+                """
+                MATCH (o:Org)
+                RETURN o{.org_id, .org_name, created_at: toString(o.created_at)} as org
+            """
+            )
+            records = await result.value("org", [])
+            return records
+
+        async with self.driver.session(
+            database=self.database, default_access_mode=neo4j.READ_ACCESS
+        ) as session:
+            org_data = await session.execute_read(get_all_org_tx)
             return org_data
