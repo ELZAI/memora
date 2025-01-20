@@ -101,7 +101,7 @@ class Neo4jMemory(BaseGraphDB):
                                                 .memory_id, 
                                                 memory: apoc.text.replace(
                                                     apoc.text.replace(memoryToReturn.memory, '(?i)user_[a-z0-9\\-]+(?:\\'s)?', user.user_name), 
-                                                    '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_label
+                                                    '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_name
                                                 ),
                                                 obtained_at: toString(memoryToReturn.obtained_at)
                                             }) as resolved_memories
@@ -150,7 +150,7 @@ class Neo4jMemory(BaseGraphDB):
                         .memory_id, 
                         memory: apoc.text.replace(
                             apoc.text.replace(m.memory, '(?i)user_[a-z0-9\\-]+(?:\\'s)?', user.user_name), 
-                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_label
+                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_name
                         ), 
                         obtained_at: toString(m.obtained_at)
                     } as memory
@@ -200,7 +200,7 @@ class Neo4jMemory(BaseGraphDB):
                         .memory_id, 
                         memory: apoc.text.replace(
                             apoc.text.replace(memory.memory, '(?i)user_[a-z0-9\\-]+(?:\\'s)?', user.user_name), 
-                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_label
+                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_name
                         ), 
                         obtained_at: toString(memory.obtained_at)
                     } as memory
@@ -253,7 +253,7 @@ class Neo4jMemory(BaseGraphDB):
                         .memory_id, 
                         memory: apoc.text.replace(
                             apoc.text.replace(m.memory, '(?i)user_[a-z0-9\\-]+(?:\\'s)?', user.user_name), 
-                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_label
+                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_name
                         ), 
                         obtained_at: toString(m.obtained_at)
                     } as memory
@@ -274,7 +274,7 @@ class Neo4jMemory(BaseGraphDB):
                         .memory_id, 
                         memory: apoc.text.replace(
                             apoc.text.replace(m.memory, '(?i)user_[a-z0-9\\-]+(?:\\'s)?', user.user_name), 
-                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_label
+                            '(?i)agent_[a-z0-9\\-]+(?:\\'s)?',  agent.agent_name
                         ), 
                         obtained_at: toString(m.obtained_at)
                     } as memory

@@ -11,14 +11,14 @@ class Neo4jAgent(BaseGraphDB):
 
     @override
     async def create_agent(
-        self, org_id: str, agent_label: str, user_id: Optional[str] = None
+        self, org_id: str, agent_name: str, user_id: Optional[str] = None
     ) -> Dict[str, str]:
         """
         Creates a new agent in the Neo4j graph database.
 
         Args:
             org_id (str): Short UUID string identifying the organization.
-            agent_label (str): Label/name for the agent.
+            agent_name (str): name for the agent.
             user_id (Optional[str]): Optional Short UUID of the user. This is used when the agent is created
                 specifically for a user, indicating that both the organization and the
                 user will have this agent.
@@ -29,7 +29,7 @@ class Neo4jAgent(BaseGraphDB):
                 + org_id: Short UUID string
                 + user_id: Optional Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
 
@@ -44,17 +44,17 @@ class Neo4jAgent(BaseGraphDB):
                         org_id: $org_id,
                         user_id: $user_id,
                         agent_id: $agent_id,
-                        agent_label: $agent_label,
+                        agent_name: $agent_name,
                         created_at: datetime()
                     })
                     CREATE (o)-[:HAS_AGENT]->(a)
                     CREATE (u)-[:HAS_AGENT]->(a)
-                    RETURN a{.org_id, .user_id, .agent_id, .agent_label, created_at: toString(a.created_at)} as agent
+                    RETURN a{.org_id, .user_id, .agent_id, .agent_name, created_at: toString(a.created_at)} as agent
                 """,
                     org_id=org_id,
                     user_id=user_id,
                     agent_id=agent_id,
-                    agent_label=agent_label,
+                    agent_name=agent_name,
                 )
             else:
                 result = await tx.run(
@@ -63,15 +63,15 @@ class Neo4jAgent(BaseGraphDB):
                     CREATE (a:Agent {
                         org_id: $org_id,
                         agent_id: $agent_id,
-                        agent_label: $agent_label,
+                        agent_name: $agent_name,
                         created_at: datetime()
                     })
                     CREATE (o)-[:HAS_AGENT]->(a)
-                    RETURN a{.org_id, .agent_id, .agent_label, created_at: toString(a.created_at)} as agent
+                    RETURN a{.org_id, .agent_id, .agent_name, created_at: toString(a.created_at)} as agent
                 """,
                     org_id=org_id,
                     agent_id=agent_id,
-                    agent_label=agent_label,
+                    agent_name=agent_name,
                 )
 
             record = await result.single()
@@ -85,7 +85,7 @@ class Neo4jAgent(BaseGraphDB):
 
     @override
     async def update_agent(
-        self, org_id: str, agent_id: str, new_agent_label: str
+        self, org_id: str, agent_id: str, new_agent_name: str
     ) -> Dict[str, str]:
         """
         Updates an existing agent in the Neo4j graph database.
@@ -93,26 +93,26 @@ class Neo4jAgent(BaseGraphDB):
         Args:
             org_id (str): Short UUID string identifying the organization.
             agent_id (str): Short UUID string identifying the agent to update.
-            new_agent_label (str): New label/name for the agent.
+            new_agent_name (str): New name for the agent.
 
         Returns:
             Dict[str, str] containing:
 
                 + org_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
         """
 
         async def update_agent_tx(tx):
             result = await tx.run(
                 """
                 MATCH (a:Agent {org_id: $org_id, agent_id: $agent_id})
-                SET a.agent_label = $new_agent_label
-                RETURN a{.org_id, .agent_id, .agent_label} as agent
+                SET a.agent_name = $new_agent_name
+                RETURN a{.org_id, .agent_id, .agent_name} as agent
             """,
                 org_id=org_id,
                 agent_id=agent_id,
-                new_agent_label=new_agent_label,
+                new_agent_name=new_agent_name,
             )
 
             record = await result.single()
@@ -165,7 +165,7 @@ class Neo4jAgent(BaseGraphDB):
                 + org_id: Short UUID string
                 + user_id: Optional Short UUID string if agent is associated with a user [:HAS_AGENT].
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
 
@@ -173,7 +173,7 @@ class Neo4jAgent(BaseGraphDB):
             result = await tx.run(
                 """
                 MATCH (a:Agent {org_id: $org_id, agent_id: $agent_id})
-                RETURN a{.org_id, .user_id, .agent_id, .agent_label, created_at: toString(a.created_at)} as agent
+                RETURN a{.org_id, .user_id, .agent_id, .agent_name, created_at: toString(a.created_at)} as agent
             """,
                 org_id=org_id,
                 agent_id=agent_id,
@@ -199,7 +199,7 @@ class Neo4jAgent(BaseGraphDB):
 
                 + org_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
 
@@ -207,7 +207,7 @@ class Neo4jAgent(BaseGraphDB):
             result = await tx.run(
                 """
                 MATCH (o:Org {org_id: $org_id})-[:HAS_AGENT]->(a:Agent)
-                RETURN a{.org_id, .agent_id, .agent_label, created_at: toString(a.created_at)} as agent
+                RETURN a{.org_id, .agent_id, .agent_name, created_at: toString(a.created_at)} as agent
             """,
                 org_id=org_id,
             )
@@ -237,7 +237,7 @@ class Neo4jAgent(BaseGraphDB):
                 + org_id: Short UUID string
                 + user_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
 
@@ -245,7 +245,7 @@ class Neo4jAgent(BaseGraphDB):
             result = await tx.run(
                 """
                 MATCH (u:User {org_id: $org_id, user_id: $user_id})-[:HAS_AGENT]->(a:Agent)
-                RETURN a{.org_id, .user_id, .agent_id, .agent_label, created_at: toString(a.created_at)} as agent
+                RETURN a{.org_id, .user_id, .agent_id, .agent_name, created_at: toString(a.created_at)} as agent
             """,
                 org_id=org_id,
                 user_id=user_id,

@@ -388,10 +388,10 @@ class Memora:
                     system_content = MEMORY_EXTRACTION_UPDATE_SYSTEM_PROMPT.format(
                         day_of_week=current_datetime.strftime("%A"),
                         current_datetime_str=current_datetime.isoformat(),
-                        agent_label=agent["agent_label"],
+                        agent_name=agent["agent_name"],
                         user_name=user["user_name"],
                         extract_for_agent=(
-                            f"and {agent['agent_label']}"
+                            f"and {agent['agent_name']}"
                             if extract_agent_memories
                             else ""
                         ),
@@ -403,10 +403,10 @@ class Memora:
                     system_content = MEMORY_EXTRACTION_SYSTEM_PROMPT.format(
                         day_of_week=current_datetime.strftime("%A"),
                         current_datetime_str=current_datetime.isoformat(),
-                        agent_label=agent["agent_label"],
+                        agent_name=agent["agent_name"],
                         user_name=user["user_name"],
                         extract_for_agent=(
-                            f"and {agent['agent_label']}"
+                            f"and {agent['agent_name']}"
                             if extract_agent_memories
                             else ""
                         ),

@@ -3,7 +3,7 @@
 **`MEMORY_EXTRACTION_SYSTEM_PROMPT`**
 ```
 The Current Date & Time is {day_of_week}, {current_datetime_str}.
-Given an interaction between ({agent_label}) and ({user_name}).
+Given an interaction between ({agent_name}) and ({user_name}).
 
 # OBJECTIVE: 
 - Extract details about {user_name} {extract_for_agent} from the interaction to be stored in memory used to personalize future interactions.
@@ -13,7 +13,7 @@ Given an interaction between ({agent_label}) and ({user_name}).
 # MEMORY GUIDELINES:  
 - Keep each memory descriptive, self-contained, not exceed 25 words.  
 - Use proper tense (past, present, continuous) as appropriate.  
-- Always use #user_#id# instead of ({user_name}) and #agent_#id# instead of ({agent_label}) in the memories. 
+- Always use #user_#id# instead of ({user_name}) and #agent_#id# instead of ({agent_name}) in the memories. 
 - Output must be JSON format using the schema:
 {schema}
 
@@ -33,7 +33,7 @@ Given an interaction between ({agent_label}) and ({user_name}).
 **`MEMORY_EXTRACTION_UPDATE_SYSTEM_PROMPT`**
 ```
 The Current Date & Time is {day_of_week}, {current_datetime_str}. 
-Given an interaction between ({agent_label}) and ({user_name}). 
+Given an interaction between ({agent_name}) and ({user_name}). 
 
 # OBJECTIVE:  
 - Extract any new details about {user_name} {extract_for_agent} from the interaction that are not already present in previously extracted memories.
@@ -44,7 +44,7 @@ Given an interaction between ({agent_label}) and ({user_name}).
 # MEMORY GUIDELINES:   
 - Keep each memory descriptive, self-contained, not exceed 25 words.   
 - Use proper tense (past, present, continuous) as appropriate.   
-- Always use #user_#id# instead of ({user_name}) and #agent_#id# instead of ({agent_label}) in the memories. 
+- Always use #user_#id# instead of ({user_name}) and #agent_#id# instead of ({agent_name}) in the memories. 
 - Do not duplicate any information already present in the previously extracted memories. 
 - Output must be JSON format using the schema: 
 {schema}

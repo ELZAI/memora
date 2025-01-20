@@ -106,14 +106,14 @@ class BaseGraphDB(ABC):
     # Agent methods
     @abstractmethod
     async def create_agent(
-        self, org_id: str, agent_label: str, user_id: Optional[str] = None
+        self, org_id: str, agent_name: str, user_id: Optional[str] = None
     ) -> Dict[str, str]:
         """
         Creates a new agent in the graph database.
 
         Args:
             org_id (str): Short UUID string identifying the organization.
-            agent_label (str): Label/name for the agent.
+            agent_name (str): name for the agent.
             user_id (Optional[str]): Optional Short UUID of the user. This is used when the agent is created
                 specifically for a user, indicating that both the organization and the
                 user will have this agent.
@@ -124,14 +124,14 @@ class BaseGraphDB(ABC):
                 + org_id: Short UUID string
                 + user_id: Optional Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
         pass
 
     @abstractmethod
     async def update_agent(
-        self, org_id: str, agent_id: str, new_agent_label: str
+        self, org_id: str, agent_id: str, new_agent_name: str
     ) -> Dict[str, str]:
         """
         Updates an existing agent in the graph database.
@@ -139,14 +139,14 @@ class BaseGraphDB(ABC):
         Args:
             org_id (str): Short UUID string identifying the organization.
             agent_id (str): Short UUID string identifying the agent to update.
-            new_agent_label (str): New label/name for the agent.
+            new_agent_name (str): New name for the agent.
 
         Returns:
             Dict[str, str] containing:
 
                 + org_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
         """
         pass
 
@@ -176,7 +176,7 @@ class BaseGraphDB(ABC):
                 + org_id: Short UUID string
                 + user_id: Optional Short UUID string if agent is associated with a user [:HAS_AGENT].
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
         pass
@@ -194,7 +194,7 @@ class BaseGraphDB(ABC):
 
                 + org_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
         pass
@@ -216,7 +216,7 @@ class BaseGraphDB(ABC):
                 + org_id: Short UUID string
                 + user_id: Short UUID string
                 + agent_id: Short UUID string
-                + agent_label: Agent label/name
+                + agent_name: Agent name
                 + created_at: ISO format timestamp
         """
         pass
