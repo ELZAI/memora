@@ -1124,6 +1124,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#020-2025-01-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      [0.2.0] - 2025-01-25
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.2.0] - 2025-01-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#016-2025-01-08" class="md-nav__link">
     <span class="md-ellipsis">
       [0.1.6] - 2025-01-08
@@ -1134,7 +1185,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fixed" class="md-nav__link">
+  <a href="#fixed_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fixed
     </span>
@@ -1158,7 +1209,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -1167,7 +1218,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#changed" class="md-nav__link">
+  <a href="#changed_1" class="md-nav__link">
     <span class="md-ellipsis">
       Changed
     </span>
@@ -1215,6 +1266,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#020-2025-01-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      [0.2.0] - 2025-01-25
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.2.0] - 2025-01-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#016-2025-01-08" class="md-nav__link">
     <span class="md-ellipsis">
       [0.1.6] - 2025-01-08
@@ -1225,7 +1327,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fixed" class="md-nav__link">
+  <a href="#fixed_1" class="md-nav__link">
     <span class="md-ellipsis">
       Fixed
     </span>
@@ -1249,7 +1351,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -1258,7 +1360,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#changed" class="md-nav__link">
+  <a href="#changed_1" class="md-nav__link">
     <span class="md-ellipsis">
       Changed
     </span>
@@ -1293,48 +1395,209 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/">Keep a Changelog</a>,<br />
 and this project adheres to <a href="https://semver.org/">Semantic Versioning</a>.</p>
-<h2 id="016-2025-01-08"><strong>[0.1.6] - 2025-01-08</strong></h2>
+<h2 id="020-2025-01-25"><strong>[0.2.0] - 2025-01-25</strong></h2>
+<h3 id="added"><strong>Added</strong></h3>
+<ul>
+<li><strong>Memory Source Tracing</strong>:</li>
+<li>All memories now include their source messages that triggered them</li>
+<li>
+<p>Any method that returns memories (e.g., <code>get_user_memory</code>, <code>get_interaction</code>, ...) will include the source messages in the returned Memory model:
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">...</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Get a memory with its source messages</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">memoryObj</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_user_memory</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">memory_id</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">memoryObj</span><span class="o">.</span><span class="n">memory</span><span class="p">)</span>  <span class="c1"># &quot;Jake is allergic to peanuts&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">memoryObj</span><span class="o">.</span><span class="n">message_sources</span><span class="p">)</span>  <span class="c1"># List of MessageBlock(s) that triggered this memory e.g [MessageBlock(role=&quot;user&quot;, content=&quot;I had another peanut incident today; it confirms I am allergic.&quot;, msg_position=0), ...]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Each message source contains:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">memoryObj</span><span class="o">.</span><span class="n">message_sources</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Role: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">role</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>         <span class="c1"># e.g., &quot;user&quot; or &quot;assistant&quot;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Content: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">content</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>    <span class="c1"># The actual message content</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Position: </span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">msg_position</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Position in the interaction</span>
+</span></code></pre></div></p>
+<p>The Memory model structure:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Memory</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">org_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">interaction_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">memory_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">memory</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">obtained_at</span><span class="p">:</span> <span class="n">datetime</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">message_sources</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">MessageBlock</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;List of messages that triggered this memory. Note: A memory &quot;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="s2">&quot;will lose its message sources if its interaction was updated with a &quot;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="s2">&quot;conflicting conversation thread that led to those message(s) truncation.&quot;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">)</span>
+</span></code></pre></div></p>
+<p>This feature helps track the context and origin of each memory, making it easier to understand how and when memories were formed.</p>
+</li>
+<li>
+<p><strong>New Graph Methods</strong>:</p>
+</li>
+<li>Added <code>get_all_organizations()</code> method to retrieve all organizations in the system (By <a href="https://github.com/alejmrm">@alejmrm</a> in <a href="https://github.com/elzai/memora/pull/9">#9</a>)</li>
+<li>Added organization and project arguments to <code>OpenAIBackendLLM</code>.
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">memora.llm_backends</span> <span class="kn">import</span> <span class="n">OpenAIBackendLLM</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">openai_backend_llm</span> <span class="o">=</span> <span class="n">OpenAIBackendLLM</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;OPENAI_API_KEY&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">organization</span><span class="o">=</span><span class="s2">&quot;openai_org_id&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;openai_project_id&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span>
+</span></code></pre></div></li>
+</ul>
+<h3 id="changed"><strong>Changed</strong></h3>
+<ul>
+<li><strong>⚠️ Breaking Changes</strong>:</li>
+<li>
+<p>All methods now return Pydantic models instead of dictionaries for better type safety and validation:</p>
+<ul>
+<li>Graph and vector database methods return models defined in <code>memora.schema.models</code></li>
+<li>See documentation for model schemas details. <a href="https://elzai.github.io/memora/api/schema/models/">Docs on Models</a></li>
+</ul>
+</li>
+<li>
+<p>Renamed Graph Method <code>get_all_users</code> → <code>get_all_org_users</code> for clarity</p>
+</li>
+<li>
+<p>Vector Database:</p>
+<ul>
+<li>Collection naming convention updated:</li>
+<li>Old default: <code>memory_collection</code></li>
+<li>
+<p>New default: <code>memory_collection_v0_2</code></p>
+</li>
+<li>
+<p>Changed default dense embedding model from <code>sentence-transformers/paraphrase-multilingual-mpnet-base-v2</code> (768dim) to <code>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code> (384dim) for good accuracy, at lower memory (now just ~700 MB instead of prior ~1.5 GB)</p>
+</li>
+<li>
+<p><strong>Migration Required</strong>: Users must call <code>vector_db.migrate_to_v0_2()</code> to migrate existing memories to the new collection that uses current dense embedding model.
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">await</span> <span class="n">vector_db</span><span class="o">.</span><span class="n">migrate_to_v0_2</span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">former_collection_name</span><span class="o">=</span><span class="s2">&quot;memory_collection&quot;</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">new_collection_name</span><span class="o">=</span><span class="s2">&quot;memory_collection_v0_2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">delete_former_collection_after</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># Optional</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Removed Graph methods <code>get_all_interaction_memories</code> and <code>get_interaction_messages</code> in favor of new unified <code>get_interaction</code> method with boolean flags:
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">...</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># DEPRECATED - These methods no longer exist</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">messages</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_interaction_messages</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">interaction_id</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">memories</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_all_interaction_memories</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">interaction_id</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># NEW - Use get_interaction with boolean flags</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Get both messages and memories</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">interaction</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_interaction</span><span class="p">(</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">org_id</span><span class="p">,</span> 
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">user_id</span><span class="p">,</span> 
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">interaction_id</span><span class="p">,</span> 
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">with_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Include messages</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">with_memories</span><span class="o">=</span><span class="kc">True</span>   <span class="c1"># Include memories</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># Access messages and memories through the returned Interaction model</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="n">messages</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">messages</span>  <span class="c1"># List[MessageBlock]</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="n">memories</span> <span class="o">=</span> <span class="n">interaction</span><span class="o">.</span><span class="n">memories</span>  <span class="c1"># List[Memory]</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># Get only messages</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="n">messages_only_interaction</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_interaction</span><span class="p">(</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="n">org_id</span><span class="p">,</span> 
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">user_id</span><span class="p">,</span> 
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="n">interaction_id</span><span class="p">,</span> 
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="n">with_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">with_memories</span><span class="o">=</span><span class="kc">False</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">)</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1"># Get only memories</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="n">memories_only_interaction</span> <span class="o">=</span> <span class="k">await</span> <span class="n">graph</span><span class="o">.</span><span class="n">get_interaction</span><span class="p">(</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="n">org_id</span><span class="p">,</span> 
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    <span class="n">user_id</span><span class="p">,</span> 
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    <span class="n">interaction_id</span><span class="p">,</span> 
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    <span class="n">with_messages</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    <span class="n">with_memories</span><span class="o">=</span><span class="kc">True</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="p">)</span>
+</span></code></pre></div></p>
+<p>The new method returns an <code>Interaction</code> Pydantic model containing:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span> <span class="nc">Interaction</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">org_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">interaction_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">updated_at</span><span class="p">:</span> <span class="n">datetime</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">MessageBlock</span><span class="p">]]</span>  <span class="c1"># Included if with_messages=True</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="n">memories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Memory</span><span class="p">]]</span>        <span class="c1"># Included if with_memories=True</span>
+</span></code></pre></div></p>
+</li>
+</ul>
 <h3 id="fixed"><strong>Fixed</strong></h3>
+<ul>
+<li><strong>Update Interaction Inconsistency</strong>:  </li>
+<li>Fixed bug where memories were no longer linked to their source messages after the update, even though the update to the interaction was just appending new messages.</li>
+<li>Fixed update to interaction not being stored when the update is shorter than existing interaction (e.g. different conversation thread).</li>
+</ul>
+<h3 id="removed"><strong>Removed</strong></h3>
+<ul>
+<li>Removed ability to configure dense and sparse embeddings - now just defaults to <code>prithivida/Splade_PP_en_v1</code> and <code>sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2</code> for optimal performance
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">...</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">### Deprecated</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">qdrant_db</span> <span class="o">=</span> <span class="n">QdrantDB</span><span class="p">(</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>                      <span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">),</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>                      <span class="n">vector_embedding_model</span><span class="o">=</span> <span class="s2">&quot;another_supported_HF_dense_model&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>                      <span class="n">sparse_vector_embedding_model</span><span class="o">=</span> <span class="s2">&quot;another_supported_HF_sparse_model&quot;</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>                    <span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">### Now</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">qdrant_db</span> <span class="o">=</span> <span class="n">QdrantDB</span><span class="p">(</span><span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">))</span>
+</span></code></pre></div></li>
+</ul>
+<hr />
+<h2 id="016-2025-01-08"><strong>[0.1.6] - 2025-01-08</strong></h2>
+<h3 id="fixed_1"><strong>Fixed</strong></h3>
 <ul>
 <li><strong>Contrary Memories Validation</strong>:  </li>
 <li>Fixed a bug related to the validation error for <code>contrary_memories</code> when saving or updating an interaction.</li>
 <li><strong>Weird Index Error</strong>:</li>
 <li>Fixed an index error that occurred when updating an interaction to a shorter and different one.</li>
 </ul>
+<hr />
 <h2 id="015-2025-01-05"><strong>[0.1.5] - 2025-01-05</strong></h2>
-<h3 id="added"><strong>Added</strong></h3>
+<h3 id="added_1"><strong>Added</strong></h3>
 <ul>
 <li><strong>Vector-Graph Database Association</strong>:  <ul>
 <li>You can now directly associate a vector database with the graph database, so graph methods calls results in memories added / deleted across both databases.  </li>
 <li>Association can be done by setting <code>.associated_vector_db</code> or during initialization.<br />
-  <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">memora.graph_db.neo4j</span> <span class="kn">import</span> <span class="n">Neo4jGraphInterface</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">qdrant_client</span> <span class="kn">import</span> <span class="n">AsyncQdrantClient</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">memora.vector_db.qdrant</span> <span class="kn">import</span> <span class="n">QdrantDB</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">neo4j_interface</span> <span class="o">=</span> <span class="n">Neo4jGraphInterface</span><span class="p">(</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;Neo4jURI&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;Neo4jUsername&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Neo4jPassword&quot;</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;Neo4jDatabaseName&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">neo4j_interface</span><span class="o">.</span><span class="n">associated_vector_db</span> <span class="o">=</span> <span class="n">QdrantDB</span><span class="p">(</span><span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">))</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># OR at initialization</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">neo4j_interface</span> <span class="o">=</span> <span class="n">Neo4jGraphInterface</span><span class="p">(</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;Neo4jURI&quot;</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;Neo4jUsername&quot;</span><span class="p">,</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Neo4jPassword&quot;</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;Neo4jDatabaseName&quot;</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="c1"># Association</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">associated_vector_db</span><span class="o">=</span><span class="n">QdrantDB</span><span class="p">(</span><span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">))</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">)</span>
+  <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">memora.graph_db.neo4j</span> <span class="kn">import</span> <span class="n">Neo4jGraphInterface</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">qdrant_client</span> <span class="kn">import</span> <span class="n">AsyncQdrantClient</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">memora.vector_db.qdrant</span> <span class="kn">import</span> <span class="n">QdrantDB</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">neo4j_interface</span> <span class="o">=</span> <span class="n">Neo4jGraphInterface</span><span class="p">(</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;Neo4jURI&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;Neo4jUsername&quot;</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Neo4jPassword&quot;</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;Neo4jDatabaseName&quot;</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">)</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">neo4j_interface</span><span class="o">.</span><span class="n">associated_vector_db</span> <span class="o">=</span> <span class="n">QdrantDB</span><span class="p">(</span><span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">))</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># OR at initialization</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">neo4j_interface</span> <span class="o">=</span> <span class="n">Neo4jGraphInterface</span><span class="p">(</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;Neo4jURI&quot;</span><span class="p">,</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;Neo4jUsername&quot;</span><span class="p">,</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;Neo4jPassword&quot;</span><span class="p">,</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;Neo4jDatabaseName&quot;</span><span class="p">,</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    <span class="c1"># Association</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>    <span class="n">associated_vector_db</span><span class="o">=</span><span class="n">QdrantDB</span><span class="p">(</span><span class="n">async_client</span><span class="o">=</span><span class="n">AsyncQdrantClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;QDRANT_URL&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;QDRANT_API_KEY&quot;</span><span class="p">))</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="p">)</span>
 </span></code></pre></div></li>
 </ul>
 </li>
 </ul>
-<h3 id="changed"><strong>Changed</strong></h3>
+<h3 id="changed_1"><strong>Changed</strong></h3>
 <ul>
 <li>
 <p><strong>⚠️ Breaking Changes</strong>:</p>
@@ -1345,14 +1608,14 @@ and this project adheres to <a href="https://semver.org/">Semantic Versioning</a
 <li>
 <p>Previously, users had to pass the vector database's callable method to certain graph database's method to ensure data consistency within a transaction. This is no longer required.<br />
 e.g 
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">...</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># DEPRECATED</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">await</span> <span class="n">memora</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">delete_user_memory</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="s2">&quot;memory_uuid&quot;</span><span class="p">,</span> <span class="n">memora</span><span class="o">.</span><span class="n">vector_db</span><span class="o">.</span><span class="n">delete_memory</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># ... and other graph methods that required passing the vector method as a callable before.</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Now</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">await</span> <span class="n">memora</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">delete_user_memory</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="s2">&quot;memory_uuid&quot;</span><span class="p">)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># ... the same goes for other graph methods, no need to pass the vector method as a callable anymore.</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">...</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># DEPRECATED</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">await</span> <span class="n">memora</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">delete_user_memory</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="s2">&quot;memory_uuid&quot;</span><span class="p">,</span> <span class="n">memora</span><span class="o">.</span><span class="n">vector_db</span><span class="o">.</span><span class="n">delete_memory</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># ... and other graph methods that required passing the vector method as a callable before.</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># Now</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">await</span> <span class="n">memora</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">delete_user_memory</span><span class="p">(</span><span class="n">org_id</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="s2">&quot;memory_uuid&quot;</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># ... the same goes for other graph methods, no need to pass the vector method as a callable anymore.</span>
 </span></code></pre></div></p>
 </li>
 </ul>

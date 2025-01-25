@@ -2578,7 +2578,7 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">former_collection_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;memory_collection&quot;</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">new_collection_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;memory_collection_v0_2&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">delete_former_collection_after</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
 </span></code></pre></div>
@@ -2667,7 +2667,7 @@
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Number of records to fetch and migrate in each batch. Defaults to 100.</p>
+                <p>Number of records to fetch and migrate in each batch. Defaults to 50.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2676,7 +2676,7 @@
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code>100</code>
+                      <code>50</code>
                   </span>
               </p>
             </td>
@@ -2687,7 +2687,7 @@
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>How many parallel workers to use for embedding. Defaults to None. If number is specified, Qdrant will use a data-parallel process. Note: Parallel processing is recommended only for large collections (tens of thousands of memories) and large batch sizes (above 500). For smaller collections or batch sizes, parallel processing may be slower.</p>
+                <p>How many parallel workers to use for embedding. Defaults to None. If number is specified, Qdrant will use a data-parallel process. Note: Parallel processing is recommended only for large collections (tens of thousands of memories) and large batch sizes (above 100). For smaller collections or batch sizes, parallel processing may be slower.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2783,7 +2783,7 @@
 </span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a>    <span class="n">former_collection_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;memory_collection&quot;</span><span class="p">,</span>
 </span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a>    <span class="n">new_collection_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;memory_collection_v0_2&quot;</span><span class="p">,</span>
 </span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a>    <span class="n">delete_former_collection_after</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
 </span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 </span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="p">):</span>
 </span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -2796,8 +2796,8 @@
 </span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="sd">        former_collection_name (str): Name of the former collection in the vector database, if you didn&#39;t explicitly specify this in earlier version it will be `memory_collection`.</span>
 </span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="sd">        new_collection_name (str): Name for the new Qdrant collection. Defaults to `memory_collection_v0_2`.</span>
 </span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="sd">        delete_former_collection_after (bool): If True, delete the former collection after migration. Defaults to True.</span>
-</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="sd">        batch_size (int): Number of records to fetch and migrate in each batch. Defaults to 100.</span>
-</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="sd">        parallel (Optional[int]): How many parallel workers to use for embedding. Defaults to None. If number is specified, Qdrant will use a data-parallel process. Note: Parallel processing is recommended only for large collections (tens of thousands of memories) and large batch sizes (above 500). For smaller collections or batch sizes, parallel processing may be slower.</span>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="sd">        batch_size (int): Number of records to fetch and migrate in each batch. Defaults to 50.</span>
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="sd">        parallel (Optional[int]): How many parallel workers to use for embedding. Defaults to None. If number is specified, Qdrant will use a data-parallel process. Note: Parallel processing is recommended only for large collections (tens of thousands of memories) and large batch sizes (above 100). For smaller collections or batch sizes, parallel processing may be slower.</span>
 </span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88"></a>
 </span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
