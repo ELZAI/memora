@@ -1400,7 +1400,7 @@
 
 <h1 id="advanced-usage"><strong>Advanced Usage</strong></h1>
 <h2 id="the-graph-model"><strong>The Graph Model</strong></h2>
-<p><img alt="Graph Model" src="../pictures/memora_graph_model_0_0_1.png" /></p>
+<p><img alt="Graph Model" src="../pictures/memora_graph_model_0_2_1.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Multi-Tenant Design</p>
 <ul>
@@ -1432,7 +1432,8 @@
 <li>Users have interactions, which are conversations with agents.</li>
 <li>Each interaction is timestamped and linked to a specific date of occurance.</li>
 <li>Memories are extracted from these interactions and stored in a user's memory collection.</li>
-<li>Memories are also linked to both their source messages and source interactions.</li>
+<li>Memories are linked to both their source messages and source interactions.</li>
+<li>Memories are also linked to the date node representing the date they were obtained at.</li>
 <li>All contrary updates to a memory are connected, so there is a historical view of memories, enabling tracking of how information evolves over time.</li>
 </ul>
 <h3 id="message-structure"><strong>Message Structure</strong></h3>
