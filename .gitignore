@@ -1,4 +1,4 @@
-*.ipynb
+test.ipynb
 .vscode
 
 # Environment variables.
