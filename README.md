@@ -24,7 +24,7 @@
 
 When we interact with people 🗣️👂, we naturally remember details from past interactions 💭, feelings 😜😢, and shared experiences 🤝. That's what makes us human. **We're bringing this same ability to AI, helping it recall just like us.**
 
-***Give the [github repo](https://github.com/ELZAI/memora/) a starhug ⭐️—it’s feeling a lil’ lonely 🥺***
+***Give the [github repo](https://github.com/ELZAI/memora/) a starhug ⭐️—it's feeling a lil' lonely 🥺***
 
 ## Key Features
 
@@ -51,6 +51,7 @@ Before using Memora, you'll need to set up the following:
      - [Azure OpenAI](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service)  
      - [Together AI](https://www.together.ai/)  
      - [Groq](https://groq.com/)
+     - [Kluster.ai](https://kluster.ai/)
      - Or Integrate Your Own LLM Provider. ([See Docs: Custom LLM Backend](https://elzai.github.io/memora/advanced_usage/#custom-llm-backend))
 
 4. **Optional: Rust/Cargo Setup**  
@@ -226,7 +227,7 @@ recalled_memories, just_memory_ids = await memora.recall_memories_for_message(
 
 # recalled_memories: [
 # Memory(..., memory_id='uuid string', memory="Jake's wife Sarah is due on December 15th", obtained_at=datetime(...), message_sources=[...]),
-# Memory(..., memory_id='uuid string', memory="Jake and Sarah are pretty confident the baby’s a girl but will confirm at the next ultrasound.", obtained_at=datetime(...), message_sources=[...]),  
+# Memory(..., memory_id='uuid string', memory="Jake and Sarah are pretty confident the baby's a girl but will confirm at the next ultrasound.", obtained_at=datetime(...), message_sources=[...]),  
 # ...]
 
 # just_memory_ids: ["uuid string", "uuid string", ...]
